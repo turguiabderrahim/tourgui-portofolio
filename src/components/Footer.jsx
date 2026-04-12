@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 Tourgui Abderrahim. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Tourgui Abderrahim. All rights reserved.</p>
       </div>
     </footer>
   );
