@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "../css/AnimatedText.css";
 
 export default function AnimatedText() {
-  const titles = ["Software Developer", "Web Designer", "Coder", "IT Support"];
   const [currentTitle, setCurrentTitle] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [displayedText, setDisplayedText] = useState("");
   const [speed, setSpeed] = useState(100);
+
+  const titles = useMemo(() => ["Software Developer", "Web Designer", "Coder", "IT Support"], []);
 
   useEffect(() => {
     const title = titles[currentTitle];
