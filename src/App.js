@@ -4,7 +4,9 @@ import AnimatedText from "./components/AnimatedText.jsx";
 import Skills from "./components/Skills.jsx";
 import { useEffect } from "react";
 import bewerbungsfoto from "./img/Bewerbungsfoto.jpg";
-
+import Nav from "./components/Nav.jsx"; 
+import Section from "./components/Projects.jsx"
+import Experience from "./components/Experience.jsx";
 export default function App() {
   useEffect(() => {
     // Intersection Observer for scroll animations
@@ -30,15 +32,8 @@ export default function App() {
 
   return (
     <div className="container">
-      <nav className="navbar">
-        <h2 id="hero">Tourgui abderrahim</h2>
-        <div className="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+      
+      <Nav/>
 
       <section className="hero">
         <AnimatedText />
@@ -57,18 +52,11 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      <section id="projects" className="section">
-        <h2>Projects</h2>
-        <div className="grid">
-          <div className="card">Project 1</div>
-          <div className="card">Project 2</div>
-          <div className="card">Project 3</div>
-        </div>
-      </section>
+      
+      <Section/>
 
       <Skills />
-
+      <Experience/>
       <section id="contact" className="section">
         <h2>Contact</h2>
         <form className="contact-form">

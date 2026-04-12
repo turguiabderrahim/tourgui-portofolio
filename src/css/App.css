@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -230,53 +232,6 @@ body {
   animation: fadeInUp 0.8s ease-out 0.2s forwards;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: #1f2937;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  animation: scaleIn 0.6s ease-out both;
-  opacity: 0;
-}
-
-.card:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.card:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.card.animate {
-  animation: scaleIn 0.6s ease-out forwards;
-}
-
-.card.animate:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.card.animate:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.card.animate:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
 /* CONTACT FORM */
 .contact-form {
   display: flex;
@@ -363,15 +318,6 @@ body {
     margin-bottom: 20px;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
   .about-container {
     flex-direction: column;
     gap: 30px;
@@ -440,16 +386,6 @@ body {
     font-size: 14px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .card {
-    padding: 12px;
-    font-size: 14px;
-  }
-
   .about-container {
     flex-direction: column;
     gap: 25px;
@@ -496,15 +432,6 @@ body {
   .section h2 {
     font-size: 24px;
     margin-bottom: 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .card {
-    padding: 15px;
   }
 }
 
@@ -562,16 +489,6 @@ body {
   }
 
   .section p {
-    font-size: 14px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .card {
-    padding: 12px;
     font-size: 14px;
   }
 }

@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Host
+Host: https://yourdomain.com
+
+# Sitemaps (Optional: uncomment and add your link if you have one)
+# Sitemap: https://yourdomain.com/sitemap.xml

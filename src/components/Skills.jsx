@@ -11,6 +11,7 @@ const skillsData = [
   { name: "MySQL", level: "Intermediate" },
   { name: "MongoDB", level: "Basic" },
   { name: "Python", level: "Medium" },
+  { name: "C#", level: "Medium" },
 ];
 
 export default function Skills() {
