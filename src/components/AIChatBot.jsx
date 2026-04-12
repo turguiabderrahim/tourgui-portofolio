@@ -38,11 +38,25 @@ export default function AIChatBot() {
         }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.reply || `Server error: ${response.status}`);
+      }
+
       const data = await response.json();
+      
+      if (!data.reply) {
+        throw new Error('No response from server');
+      }
+
       setMessages(prev => [...prev, { role: "assistant", content: data.reply }]);
     } catch (error) {
-  console.error("Detailed Error:", error); // This prints the real problem to the console
-  setMessages(prev => [...prev, { role: "assistant", content: `Error: ${error.message}` }]);
+      console.error("Chat Error:", error);
+      const errorMessage = error.message || 'Failed to connect to chat service';
+      setMessages(prev => [...prev, { 
+        role: "assistant", 
+        content: `❌ ${errorMessage}. Please try again or check if the API key is configured properly.` 
+      }]);
     } finally {
       setIsLoading(false);
     }
