@@ -48,7 +48,7 @@ export default function App() {
           </div>
           <div className="about-content">
             <h2>About Me</h2>
-            <p>I am a developer focused on building clean and scalable web apps.</p>
+            <p>I’m a motivated student at Vytautas Magnus University (VMU) in the Faculty of Informatics, pursuing a Bachelor’s degree in Information Systems.I’m passionate about technology, problem-solving, and continuous learning. My previous studies at IFMOTICA (Institute of Training in Offshoring and Audiovisual Professions) gave me a solid foundation in digital and communication skills.</p>
           </div>
         </div>
       </section>
