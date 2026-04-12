@@ -27,9 +27,9 @@ export default function About() {
                         My previous studies at IFMOTICA gave me a solid foundation in digital and communication skills.
                     </p>
                     <div className="tech-pills">
-                        <span>Python</span>
-                        <span>ReactJS</span>
                         <span>System Integration</span>
+                        <span>IT Support</span>
+                        <span>Software engenring</span>
                     </div>
                 </div>
             </div>

@@ -7,13 +7,14 @@ import Skills from "./components/Skills.jsx";
 import Experience from "./components/Experience.jsx";
 import Education from "./components/Education.jsx";
 import Footer from "./components/Footer.jsx";
+import AIChatBot from "./components/AIChatBot.jsx";
 
 export default function App() {
   return (
     <div className="container">
       <Nav />
-
       <main>
+
         <section className="hero">
           <div className="hero-copy">
             <p className="hero-label">Hi, I’m Tourgui Abderrahim</p>
@@ -26,15 +27,14 @@ export default function App() {
             </a>
           </div>
         </section>
-
         <About />
         <Projects />
         <Skills />
         <Experience />
         <Education />
       </main>
-
       <Footer />
+      <AIChatBot />
     </div>
   );
 }
