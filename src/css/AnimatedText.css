@@ -1,0 +1,66 @@
+.animated-text {
+  font-size: 48px;
+  margin: 0 0 20px 0;
+  display: inline-block;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  min-height: 60px;
+  min-width: 500px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 60px;
+  background-color: #3b82f6;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%,
+  49% {
+    background-color: #3b82f6;
+  }
+  50%,
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET RESPONSIVENESS (768px and below) */
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 36px;
+    min-height: 45px;
+    min-width: 350px;
+  }
+
+  .cursor {
+    height: 45px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS (480px and below) */
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 28px;
+    min-height: 35px;
+    min-width: 250px;
+  }
+
+  .cursor {
+    height: 35px;
+  }
+}

@@ -1,0 +1,65 @@
+.skills-section {
+  padding-top: 0;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  background: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #f8fafc;
+}
+
+.skill-name small {
+  color: #94a3b8;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #1f2937;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6 0%, #9333ea 100%);
+}
+
+.skill-html { width: 95%; }
+.skill-css { width: 90%; }
+.skill-javascript { width: 85%; }
+.skill-react { width: 75%; }
+.skill-node-js { width: 70%; }
+.skill-git { width: 80%; }
+.skill-php { width: 80%; }
+.skill-mysql { width: 75%; }
+.skill-sql-server { width: 70%; }
+.skill-mongodb { width: 10%; }
+.skill-python { width: 50%; }
+
+@media (max-width: 480px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    padding: 16px;
+  }
+}
