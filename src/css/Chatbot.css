@@ -127,10 +127,42 @@
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .chat-window {
+    width: calc(100vw - 60px);
+    height: 450px;
+    right: 30px;
+    bottom: 20px;
+  }
+
+  .chat-messages {
+    padding: 15px;
+  }
+
+  .chat-input {
+    padding: 12px;
+  }
+
+  .chat-input input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .chat-button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 @media (max-width: 480px) {
   .chat-window {
     width: calc(100vw - 40px);
     height: 400px;
     right: 20px;
+    bottom: 15px;
+  }
+
+  .chat-toggle {
+    width: 50px;
+    height: 50px;
   }
 }

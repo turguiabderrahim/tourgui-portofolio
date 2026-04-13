@@ -13,6 +13,8 @@ body {
 
 .container {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 #hero {
   font-size: 25px;
@@ -254,7 +256,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
@@ -300,6 +302,26 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* TABLET RESPONSIVENESS (1024px and below) */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .section {
+    padding: 50px 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+}
+
 /* TABLET RESPONSIVENESS (768px and below) */
 @media (max-width: 768px) {
   .navbar {
@@ -338,7 +360,7 @@ body {
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
   }
 
@@ -356,7 +378,29 @@ body {
     height: 250px;
   }
 }
+/* LARGE SCREENS (1440px and above) */
+@media (min-width: 1440px) {
+  .hero h1 {
+    font-size: 56px;
+  }
 
+  .hero-description {
+    font-size: 20px;
+  }
+
+  .section h2 {
+    font-size: 36px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
 /* MOBILE RESPONSIVENESS (480px and below) */
 @media (max-width: 480px) {
   .navbar {
@@ -396,9 +440,11 @@ body {
     font-size: 14px;
   }
 
-  .hero button {
-    padding: 10px 20px;
-    font-size: 14px;
+  .hero button,
+  .hero-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    min-height: 44px; /* Touch-friendly */
   }
 
   .section {
@@ -432,120 +478,5 @@ body {
   .about-image img {
     width: 200px;
     height: 200px;
-  }
-}
-
-/* TABLET RESPONSIVENESS (768px and below) */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .navbar h2 {
-    font-size: 20px;
-  }
-
-  .nav-links {
-    gap: 15px;
-    font-size: 14px;
-  }
-
-  .hero {
-    height: 60vh;
-    padding: 20px;
-  }
-
-  .hero h1 {
-    font-size: 36px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-
-  .section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .card {
-    padding: 15px;
-  }
-}
-
-/* MOBILE RESPONSIVENESS (480px and below) */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 12px 15px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .navbar h2 {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .nav-links a {
-    text-align: center;
-    font-size: 13px;
-  }
-
-  .hero {
-    height: auto;
-    min-height: 50vh;
-    padding: 30px 15px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
-
-  .hero button {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  .section {
-    padding: 30px 15px;
-  }
-
-  .section h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .section p {
-    font-size: 14px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .card {
-    padding: 12px;
-    font-size: 14px;
   }
 }

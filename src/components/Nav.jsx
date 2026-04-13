@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "../css/nav.css";
+import LanguageToggle from "./LanguageToggle.jsx";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -25,11 +28,12 @@ export default function Nav() {
         </button>
 
         <div className={`nav-links-wrapper ${isMenuOpen ? "is-open" : ""}`}>
-          <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
-          <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
-          <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
-          <a href="#experience" onClick={() => setIsMenuOpen(false)}>Experience</a>
-          <a href="#education" onClick={() => setIsMenuOpen(false)}>Education</a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>{t('nav.about')}</a>
+          <a href="#projects" onClick={() => setIsMenuOpen(false)}>{t('nav.projects')}</a>
+          <a href="#skills" onClick={() => setIsMenuOpen(false)}>{t('nav.skills')}</a>
+          <a href="#experience" onClick={() => setIsMenuOpen(false)}>{t('nav.experience')}</a>
+          <a href="#education" onClick={() => setIsMenuOpen(false)}>{t('nav.education')}</a>
+          <LanguageToggle />
         </div>
       </div>
     </nav>

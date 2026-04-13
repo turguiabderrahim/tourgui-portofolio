@@ -7,7 +7,10 @@ export default function AnimatedText() {
   const [displayedText, setDisplayedText] = useState("");
   const [speed, setSpeed] = useState(100);
 
-  const titles = useMemo(() => ["Software Developer", "Web Designer", "Coder", "IT Support"], []);
+  const titles = useMemo(() => ["Software Engineer",
+  "Full-Stack Developer",
+  "Informatics Specialist",
+  "Python & React Developer"], []);
 
   useEffect(() => {
     const title = titles[currentTitle];

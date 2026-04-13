@@ -1,7 +1,10 @@
 import bewerbungsfoto from "../img/Bewerbungsfoto.jpg";
 import "../css/About.css";
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+    const { t } = useTranslation();
+
     return (
         <section id="about" className="about-section">
             {/* The Animated Background */}
@@ -16,20 +19,45 @@ export default function About() {
                 </div>
 
                 <div className="about-content">
-                    <div className="status-badge">SYSTEM: ACTIVE</div>
-                    <h2>About Me</h2>
+                    <div className="status-badge">{t('about.status')}</div>
+                    <h2>{t('about.title')}</h2>
+                    <p dangerouslySetInnerHTML={{ __html: t('about.text1') }}></p>
                     <p>
-                        I’m a motivated student at <strong>Vytautas Magnus University (VMU)</strong> in the Faculty of Informatics, 
-                        pursuing a Bachelor’s degree in <strong>Information Systems</strong>.
-                    </p>
-                    <p>
-                        I’m passionate about technology, problem-solving, and continuous learning. 
-                        My previous studies at IFMOTICA gave me a solid foundation in digital and communication skills.
+                        {t('about.text2')}
                     </p>
                     <div className="tech-pills">
-                        <span>System Integration</span>
-                        <span>IT Support</span>
-                        <span>Software engenring</span>
+                        <span>{t('about.skill1')}</span>
+                        <span>{t('about.skill2')}</span>
+                        <span>{t('about.skill3')}</span>
+                    </div>
+
+                    {/* CV Download Section */}
+                    <div className="cv-download-section">
+                        <h3>{t('cv.title')}</h3>
+                        <p>{t('cv.subtitle')}</p>
+                        <div className="cv-buttons">
+                            <a href="/cv/CV_English.pdf" download="Tourgui_Abderrhim_CV_English.pdf" className="cv-download-btn">
+                                <span className="cv-icon">📄</span>
+                                <span className="cv-text">
+                                    <strong>{t('cv.english')}</strong>
+                                    <small>{t('cv.english.download')}</small>
+                                </span>
+                            </a>
+                            <a href="/cv/CV_French.pdf" download="Tourgui_Abderrhim_CV_French.pdf" className="cv-download-btn">
+                                <span className="cv-icon">📄</span>
+                                <span className="cv-text">
+                                    <strong>{t('cv.french')}</strong>
+                                    <small>{t('cv.french.download')}</small>
+                                </span>
+                            </a>
+                            <a href="/cv/CV_German.pdf" download="Tourgui_Abderrhim_CV_German.pdf" className="cv-download-btn">
+                                <span className="cv-icon">📄</span>
+                                <span className="cv-text">
+                                    <strong>{t('cv.german')}</strong>
+                                    <small>{t('cv.german.download')}</small>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

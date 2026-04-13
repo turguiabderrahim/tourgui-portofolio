@@ -1,0 +1,28 @@
+# CV Files Setup
+
+This folder contains placeholder files for your CV downloads. To set up your actual CV files:
+
+## Instructions:
+
+1. **Create your CV files** in PDF format for each language you want to support
+2. **Name them exactly** as follows:
+   - English: `CV_English.pdf`
+   - French: `CV_French.pdf`
+   - German: `CV_German.pdf`
+
+3. **Replace the placeholder files** in this folder with your actual PDF files
+
+4. **Test the download** by visiting your portfolio and clicking the CV download buttons
+
+## Supported Languages:
+- 🇺🇸 English
+- 🇫🇷 French
+- 🇩🇪 German
+
+## File Requirements:
+- Format: PDF
+- Recommended file size: Under 5MB
+- Clear, professional formatting
+- Optimized for printing and digital viewing
+
+The download functionality will work automatically once you replace the placeholder files with your actual CV PDFs.

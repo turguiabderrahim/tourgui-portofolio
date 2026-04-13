@@ -44,6 +44,15 @@
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.25s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links-wrapper a:hover,
+.nav-links-wrapper a:focus {
+  color: #facc15;
+  outline: 2px solid #facc15;
+  outline-offset: 2px;
 }
 
 .nav-links-wrapper a:hover {
@@ -113,6 +122,9 @@
 
   .nav-links-wrapper a {
     font-size: 1.2rem;
-    padding: 10px;
+    padding: 12px 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 }

@@ -1,31 +1,34 @@
+import { useTranslation } from 'react-i18next';
 import "../css/Projects.css";
 
-const projectData = [
-  {
-    title: "Python RPG: Titan Trials",
-    description: "A modular text-based RPG featuring complex logic and combat systems.",
-    tech: ["Python", "Logic"],
-    link: "#"
-  },
-  {
-    title: "Pomodoro Timer",
-    description: "A productivity app built with React, featuring custom intervals and local storage.",
-    tech: ["ReactJS", "CSS3"],
-    link: "#"
-  },
-  {
-    title: "Data Analysis Dashboard",
-    description: "Visualizing complex datasets using Pandas and modern charting libraries.",
-    tech: ["Python", "Pandas"],
-    link: "#"
-  }
-];
-
 export default function Projects() {
+  const { t } = useTranslation();
+
+  const projectData = [
+    {
+      title: t("projects.python_rpg.title"),
+      description: t("projects.python_rpg.description"),
+      tech: ["Python", "Logic"],
+      link: "#"
+    },
+    {
+      title: t("projects.pomodoro.title"),
+      description: t("projects.pomodoro.description"),
+      tech: ["ReactJS", "CSS3"],
+      link: "#"
+    },
+    {
+      title: t("projects.dashboard.title"),
+      description: t("projects.dashboard.description"),
+      tech: ["Python", "Pandas"],
+      link: "#"
+    }
+  ];
+
   return (
     <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="section-title">Featured Work</h2>
+        <h2 className="section-title">{t("projects.title")}</h2>
         <div className="projects-grid">
           {projectData.map((project, index) => (
             <div key={index} className="project-card">

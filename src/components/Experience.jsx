@@ -1,63 +1,66 @@
+import { useTranslation } from 'react-i18next';
 import "../css/Experience.css";
 
-const experienceData = [
-  {
-    company: "Webhelp Enterprise",
-    position: "Telecommunications Specialist",
-    type: "Full-time",
-    duration: "Aug 2023 - Jun 2025",
-    location: "Meknes, Morocco",
-    workType: "On-site",
-    description: "Help Desk Support for a Moroccan ISP project",
-    skills: ["Help Desk Support", "English", "Technical Support"]
-  },
-  {
-    company: "NewDev MAROC",
-    position: "Software Developer",
-    type: "Internship",
-    duration: "Mar 2023 - Jun 2023",
-    location: "Fès-Meknès, Morocco",
-    workType: "Hybrid",
-    description: "Software development and database management",
-    skills: ["MySQL", "C#", "Web Development"]
-  },
-  {
-    company: "AI Marketing",
-    position: "Software Developer",
-    type: "Internship",
-    duration: "Aug 2022 - Jan 2023",
-    location: "Remote",
-    workType: "Remote",
-    description: "Analytics and data analysis with Excel",
-    skills: ["Analytics", "Microsoft Excel", "Data Analysis"]
-  },
-  {
-    company: "Sudan Soft",
-    position: "Software Developer",
-    type: "Full-time",
-    duration: "Nov 2021 - May 2022",
-    location: "Khartoum, Sudan",
-    workType: "Remote",
-    description: "Web development and database management",
-    skills: ["Web Development", "MySQL", "Backend Development"]
-  },
-  {
-    company: "EPSI Schule",
-    position: "Software Developer",
-    type: "Internship",
-    duration: "May 2021 - Jul 2021",
-    location: "Fez, Morocco",
-    workType: "Hybrid",
-    description: "Analytics and database development",
-    skills: ["Analytics", "MySQL", "System Design"]
-  }
-];
-
 export default function Experience() {
+  const { t } = useTranslation();
+
+  const experienceData = [
+    {
+      company: t("experience.webhelp.company"),
+      position: t("experience.webhelp.position"),
+      type: t("experience.webhelp.type"),
+      duration: t("experience.webhelp.duration"),
+      location: t("experience.webhelp.location"),
+      workType: t("experience.webhelp.workType"),
+      description: t("experience.webhelp.description"),
+      skills: ["Help Desk Support", "English", "Technical Support"]
+    },
+    {
+      company: t("experience.newdev.company"),
+      position: t("experience.newdev.position"),
+      type: t("experience.newdev.type"),
+      duration: t("experience.newdev.duration"),
+      location: t("experience.newdev.location"),
+      workType: t("experience.newdev.workType"),
+      description: t("experience.newdev.description"),
+      skills: ["MySQL", "C#", "Web Development"]
+    },
+    {
+      company: t("experience.ai.company"),
+      position: t("experience.ai.position"),
+      type: t("experience.ai.type"),
+      duration: t("experience.ai.duration"),
+      location: t("experience.ai.location"),
+      workType: t("experience.ai.workType"),
+      description: t("experience.ai.description"),
+      skills: ["Web Development", "AI Integration", "JavaScript"]
+    },
+    {
+      company: t("experience.sudan.company"),
+      position: t("experience.sudan.position"),
+      type: t("experience.sudan.type"),
+      duration: t("experience.sudan.duration"),
+      location: t("experience.sudan.location"),
+      workType: t("experience.sudan.workType"),
+      description: t("experience.sudan.description"),
+      skills: ["Web Development", "MySQL", "Backend Development"]
+    },
+    {
+      company: t("experience.epsi.company"),
+      position: t("experience.epsi.position"),
+      type: t("experience.epsi.type"),
+      duration: t("experience.epsi.duration"),
+      location: t("experience.epsi.location"),
+      workType: t("experience.epsi.workType"),
+      description: t("experience.epsi.description"),
+      skills: ["Analytics", "MySQL", "System Design"]
+    }
+  ];
+
   return (
     <section id="experience" className="experience-section">
       <div className="container">
-        <h2 className="section-title">Professional Experience</h2>
+        <h2 className="section-title">{t("experience.title")}</h2>
         <div className="experience-timeline">
           {experienceData.map((exp, index) => (
             <div key={index} className="experience-item">
