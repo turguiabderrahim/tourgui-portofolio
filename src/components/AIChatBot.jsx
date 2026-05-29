@@ -24,7 +24,9 @@ export default function AIChatBot() {
     if (!input.trim()) return;
 
     const userMessage = { role: "user", content: input };
-    setMessages(prev => [...prev, userMessage]);
+    const updatedHistory = [...messages, userMessage];
+
+    setMessages(updatedHistory);
     setInput("");
     setIsLoading(true);
 
@@ -34,7 +36,7 @@ export default function AIChatBot() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           message: input,
-          history: messages 
+          history: updatedHistory,
         }),
       });
 
@@ -94,7 +96,7 @@ export default function AIChatBot() {
             <input 
               value={input} 
               onChange={(e) => setInput(e.target.value)} 
-              onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
+              onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
               placeholder="Ask a question..."
               autoFocus
             />
